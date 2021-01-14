@@ -1,0 +1,46 @@
+﻿@page
+@model Sutea_Paul_Vasile_Proiect.Pages.Jocuri.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+
+<h3>Esti sigur ca doresti sa cumperi acest joc?</h3>
+<div>
+    
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Joc.Titlu_joc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Joc.Titlu_joc)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Joc.Publisher)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Joc.Publisher)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Joc.Pret)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Joc.Pret)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Joc.DataPublicarii)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Joc.DataPublicarii)
+        </dd>
+
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Joc.ID" />
+        <input type="submit" value="CUMPARA" class="btn btn-danger" /> |
+        <a asp-page="./Index">Inapoi la lista de jocuri</a>
+    </form>
+</div>
